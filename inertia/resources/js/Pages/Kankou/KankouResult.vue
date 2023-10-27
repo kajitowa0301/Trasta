@@ -4,6 +4,7 @@ import App from '@/Layouts/App.vue';
 import { Head, Link,usePage } from '@inertiajs/vue3';
 
 const {kankous} = usePage().props;
+const ArrayNull = kankous.length;
 </script>
 
 <template>
@@ -16,7 +17,7 @@ const {kankous} = usePage().props;
       <li class="list">観光地検索結果一覧</li>
     </ol>
   </nav>
-  <div v-if="kankous == null" class=" font-semibold text-red-600 text-2xl">投稿が見つかりません</div>
+  <div v-if="ArrayNull === 0" class=" font-semibold text-red-600 text-2xl">投稿が見つかりません</div>
 
   <div id="card">
     <div class="container-plan">
