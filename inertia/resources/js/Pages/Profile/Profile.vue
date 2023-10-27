@@ -59,7 +59,7 @@ const {restran} = usePage().props;
     </div>
   </div>
   <!-- 最近の投稿を表示する部分 -->
-  <div class="new-container">
+  <div class="new-container" v-if="kankou !== null && restran !== null">
     <div class="center-post">
       <div class="new-title-delete">
         <div class="new-post"><span>最新の投稿</span></div>
