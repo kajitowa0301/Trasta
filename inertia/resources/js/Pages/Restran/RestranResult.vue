@@ -3,7 +3,8 @@ import App from '@/Layouts/App.vue';
 import { Head, Link,usePage } from '@inertiajs/vue3';
 
 const {restran} = usePage().props;
-console.log(restran);
+console.log(restran.length);
+const ArrayNull = restran.length;
 </script>
 
 <template>
@@ -16,7 +17,7 @@ console.log(restran);
             <li class="list">飲食店一覧</li>
         </ol>
     </nav>
-    <div v-if="restran == null" class=" font-semibold text-red-600 text-2xl">投稿が見つかりません</div>
+    <div v-if="ArrayNull === 0" class=" font-semibold text-red-600 text-2xl">投稿が見つかりません</div>
     <div id="card">
     <div class="container-plan">
       <div class="flex flex-wrap">
